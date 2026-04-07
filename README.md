@@ -1,4 +1,5 @@
-=== BitBirds Pricing Table ===
+## BitBirds Pricing Table
+
 Contributors: bitbirds
 Tags: pricing table, pricing, shortcode, whatsapp, reseller hosting
 Requires at least: 5.5
@@ -12,9 +13,9 @@ Create beautiful, responsive pricing tables and display them anywhere with short
 
 == Description ==
 
-**BitBirds Pricing Table** lets you build professional pricing tables from the WordPress admin and embed them anywhere using simple shortcodes. Perfect for hosting providers, SaaS products, agencies, and any business with tiered pricing.
+BitBirds Pricing Table lets you build professional pricing tables from the WordPress admin and embed them anywhere using simple shortcodes. Perfect for hosting providers, SaaS products, agencies, and any business with tiered pricing.
 
-= Key Features =
+# Key Features
 
 - **Multiple tables per shortcode** — group tables into a grid (1–6 columns)
 - **Drag-and-drop** feature list reordering
@@ -30,19 +31,23 @@ Create beautiful, responsive pricing tables and display them anywhere with short
 
 = Shortcodes =
 
-**Group shortcode** (multiple tables in a grid):
+# Group shortcode (multiple tables in a grid):
+
 `[bbpt_group id="123"]`
 
-**Single table shortcode**:
+# Single table shortcode:
+
 `[bbpt_table id="456"]`
 
-**Single table with color override**:
+# Single table with color override:
+
 `[bbpt_table id="456" scheme="gold"]`
 
-= Available Color Scheme Keys =
+# Available Color Scheme Keys
+
 `amber` · `blue` · `green` · `purple` · `red` · `bronze` · `silver` · `gold` · `dark` · `teal`
 
-== Installation ==
+# Installation
 
 1. Upload the `bitbirds-pricing-table` folder to `/wp-content/plugins/`
 2. Activate the plugin through **Plugins** in WordPress admin
@@ -51,7 +56,7 @@ Create beautiful, responsive pricing tables and display them anywhere with short
 5. Group them under **Table Groups → Add New Group**
 6. Copy the shortcode and paste it into any page or post
 
-== Frequently Asked Questions ==
+# Frequently Asked Questions
 
 = How do I show multiple tables side by side? =
 Create a **Table Group**, add your tables, set the **Grid Columns**, then use `[bbpt_group id="X"]`.
