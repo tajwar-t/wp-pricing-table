@@ -1,0 +1,257 @@
+/* ====================================================
+   BitBirds Pricing Table – Frontend Styles v1.1
+   ==================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Nunito:wght@400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+/* ---- Section ---- */
+.bbpt-section {
+  padding: 40px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bbpt-section-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 36px;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Grid – FIX 4+5: driven entirely by inline style from PHP ---- */
+.bbpt-grid--dynamic {
+  width: 100%;
+}
+
+/* ---- Card ---- */
+.bbpt-card {
+  background: #fff;
+  border: 1px solid #e2e6ef;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.bbpt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.bbpt-card--featured {
+  transform: scale(1.03);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+  z-index: 3;
+  border-color: var(--bbpt-header-start);
+}
+
+.bbpt-card--featured:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+/* ---- Ribbon badge ---- */
+.bbpt-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: #1a1a2e;
+  color: var(--bbpt-header-start);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 5px 42px;
+  transform: rotate(45deg);
+  white-space: nowrap;
+  z-index: 10;
+  line-height: 1.4;
+}
+
+/* ---- Header ---- */
+.bbpt-card__header {
+  background: linear-gradient(
+    135deg,
+    var(--bbpt-header-start),
+    var(--bbpt-header-end)
+  );
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+
+.bbpt-card__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--bbpt-header-text);
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.bbpt-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.bbpt-currency {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bbpt-header-text);
+}
+
+.bbpt-amount {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--bbpt-header-text);
+  line-height: 1;
+}
+
+.bbpt-period {
+  font-size: 0.82rem;
+  color: var(--bbpt-header-text);
+  opacity: 0.75;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+/* ---- Body ---- */
+.bbpt-card__body {
+  padding: 22px 18px 10px;
+  flex: 1;
+}
+
+.bbpt-card__desc {
+  color: #888;
+  font-size: 0.84rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.bbpt-features-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ---- Feature list ---- */
+.bbpt-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bbpt-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.bbpt-feat-item:last-child {
+  border-bottom: none;
+}
+
+/* FIX 1: icon shown on left of each item, uses per-item FA class */
+.bbpt-feat-icon {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  width: 16px;
+  text-align: center;
+  line-height: 1;
+}
+
+.bbpt-icon--include {
+  color: #27ae60;
+}
+.bbpt-icon--exclude {
+  color: #e74c3c;
+}
+
+.bbpt-feat-text--include {
+  color: #444;
+}
+.bbpt-feat-text--exclude {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+/* ---- CTA ---- */
+.bbpt-card__cta {
+  padding: 18px 18px 26px;
+  text-align: center;
+}
+
+.bbpt-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(
+    135deg,
+    var(--bbpt-btn-start),
+    var(--bbpt-btn-end)
+  );
+  color: var(--bbpt-btn-text) !important;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 13px 0;
+  border-radius: 4px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px var(--bbpt-btn-shadow, rgba(0, 0, 0, 0.2));
+  transition:
+    filter 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.bbpt-btn:hover {
+  filter: brightness(0.88);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--bbpt-btn-shadow, rgba(0, 0, 0, 0.3));
+}
+
+.bbpt-wa-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ---- Responsive – collapse grid at breakpoints ---- */
+@media (max-width: 900px) {
+  .bbpt-grid--dynamic {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .bbpt-card--featured {
+    transform: none;
+  }
+  .bbpt-card--featured:hover {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 600px) {
+  .bbpt-grid--dynamic {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
